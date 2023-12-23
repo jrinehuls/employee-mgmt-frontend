@@ -1,5 +1,8 @@
+import { useState } from "react";
 
 function ListEmployee() {
+
+    let numRows = 0; 
 
     const employees = [
         {
@@ -23,9 +26,9 @@ function ListEmployee() {
     ]
 
     return(
-        <div>
+        <div className="container">
             <h1>Employees</h1>
-            <table>
+            <table className="employee-table">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -35,13 +38,15 @@ function ListEmployee() {
                     </tr>
                 </thead>
                 <tbody>
-                {employees.map(e => 
-                    <tr key={e.id}>
+                {employees.map(e => {
+                    numRows++;
+                    return <tr key={e.id} className={numRows % 2 === 0 ? "even" : "odd"}>
                         <td>{e.id}</td>
                         <td>{e.firstName}</td>
                         <td>{e.lastName}</td>
                         <td>{e.email}</td>
                     </tr>
+                }
                 )}
                 </tbody>
             </table>

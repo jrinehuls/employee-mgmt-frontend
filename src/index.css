@@ -1,3 +1,37 @@
-table {
-    background-color: red;
+.container {
+    display: flex;
+    max-width: 80%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee-table {
+    text-align: left;
+    width: 80%;
+    height: auto;
+    border-spacing: 0px;
+    border-collapse: separate;
+    border: 2px solid black;
+}
+
+.employee-table td, th{
+    padding: 10px 10px;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+}
+
+.employee-table th {
+    background-color: greenyellow;
+    text-align: center;
+}
+
+.employee-table tr.even {
+    background-color: rgb(250, 250, 250);
+}
+
+.employee-table tr.odd {
+    background-color: rgb(240, 240, 240);
 }
