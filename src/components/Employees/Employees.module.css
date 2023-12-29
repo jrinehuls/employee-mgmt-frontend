@@ -1,0 +1,60 @@
+.tableContainer {
+    display: flex;
+    max-width: 80%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonContainer > h1 {
+    margin-left: 10px;
+}
+
+.addEmpBtn {
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.employeeTable {
+    text-align: left;
+    width: 80%;
+    height: auto;
+    border-spacing: 0px;
+    border-collapse: separate;
+    border: 2px solid black;
+}
+
+.employeeTable td, th{
+    padding: 10px 10px;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+}
+
+.employeeTable th {
+    background-color: greenyellow;
+    text-align: center;
+}
+
+.employeeTable tr.even {
+    background-color: rgb(250, 250, 250);
+}
+
+.employeeTable tr.odd {
+    background-color: rgb(240, 240, 240);
+}

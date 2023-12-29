@@ -1,15 +1,21 @@
-import ListEmployee from "./ListEmployee";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Employees from "./Employees/Employees";
+import Employee from "./Employee";
+import Footer from "./Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
     return (
-        <>
+        <BrowserRouter>
             <Header />
-            <ListEmployee />
+            <Routes>
+                <Route path="/" element={<Employees />}></Route>
+                <Route path="/employees" element={<Employees />}></Route>
+                <Route path="/add-employee" element={<Employee />}></Route>
+            </Routes>
             <Footer />
-        </>
+        </BrowserRouter>
     );
 
 }
