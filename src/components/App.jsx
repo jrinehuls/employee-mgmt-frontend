@@ -1,6 +1,6 @@
 import Header from "./Header/Header";
 import Employees from "./Employees/Employees";
-import Employee from "./Employee";
+import Employee from "./Employee/Employee";
 import Footer from "./Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
