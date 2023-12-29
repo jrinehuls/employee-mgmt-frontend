@@ -1,32 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getEmployees } from "../services/employeeService";
 
 function ListEmployee() {
 
-    let numRows = 0; 
+    const [employees, setEmployees] = useState([])
 
-    const employees = [
-        {
-            id: 1,
-            firstName: "Justin",
-            lastName: "Rinehuls",
-            email: "jrinehuls@gmail.com"
-        },
-        {
-            id: 2,
-            firstName: "Jennifer",
-            lastName: "Getz",
-            email: "jcgetz84@gmail.com"
-        },
-        {
-            id: 3,
-            firstName: "Patty",
-            lastName: "Dirl",
-            email: "prettydirl@gmail.com"
-        },
-    ]
+    useEffect(() => {
+        async function fetchData() {
+            const response = await getEmployees();
+            setEmployees(response.data)
+          }
+          fetchData();
+    }, [])
 
-    return(
-        <div className="container">
+    let numRows = 0;
+
+    return (
+        <div className="table-container">
             <h1>Employees</h1>
             <table className="employee-table">
                 <thead>
@@ -40,14 +30,15 @@ function ListEmployee() {
                 <tbody>
                 {employees.map(e => {
                     numRows++;
-                    return <tr key={e.id} className={numRows % 2 === 0 ? "even" : "odd"}>
-                        <td>{e.id}</td>
-                        <td>{e.firstName}</td>
-                        <td>{e.lastName}</td>
-                        <td>{e.email}</td>
-                    </tr>
-                }
-                )}
+                    return (
+                        <tr key={e.id} className={numRows % 2 === 0 ? "even" : "odd"}>
+                            <td>{e.id}</td>
+                            <td>{e.first_name}</td>
+                            <td>{e.last_name}</td>
+                            <td>{e.email}</td>
+                        </tr>
+                    );
+                })}
                 </tbody>
             </table>
         </div>
