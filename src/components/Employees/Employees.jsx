@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styles from './Employees.module.css';
+import { getEmployees } from "../../services/employeeService";
 
 
 function Employees() {
@@ -12,9 +13,8 @@ function Employees() {
 
     useEffect(() => {
         async function fetchData() {
-            const url = "http://localhost:8080/api/employee"
-            const response = await Axios.get(url + "/all");
-            setEmployees(response.data)
+            const response = await getEmployees();
+            setEmployees(response.data);
           }
           fetchData();
     }, [])

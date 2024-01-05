@@ -4,6 +4,9 @@
     align-items: center;
     background-color: black;
     height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar span {
