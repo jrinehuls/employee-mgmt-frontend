@@ -1,0 +1,7 @@
+li {
+    color: red;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    list-style-type: none;
+}
