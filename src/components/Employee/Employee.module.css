@@ -10,10 +10,21 @@
     margin: 40px;
 }
 
-.employee {
-    width: 500px;
-    height: 500px;
+.employeeCard {
+
+    padding: 50px;
+    width: 450px;
+    height: 450px;
     border: 1px solid black;
     border-radius: 5%;
-    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputArea {
+    display: flex;
+    flex-direction: column;
 }
