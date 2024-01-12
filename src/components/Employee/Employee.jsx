@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import Axios from "axios";
-import styles from './Employee.module.css'
+import './Employee.css'
 import getErrorResponse from '../../utils/errorUtils'
 import FormFieldError from '../FormFieldError/FormFieldError';
 import { useNavigate } from "react-router-dom";
@@ -38,23 +37,23 @@ function Employee() {
     }
 
     return(
-        <div className={styles.container}>
+        <div className='container'>
             <h1>Add Employee</h1>
-            <div className={styles.employeeCard}>
+            <div className='employee-card'>
                 <form>
-                    <div className={styles.inputArea}>
+                    <div className='input-area'>
                         <label>First Name:</label>
-                        <input onChange={handleTextChange} className={styles.text} type='text' placeholder='Enter first name...' name='first_name' value={employee.first_name}></input>
+                        <input onChange={handleTextChange} className='text' type='text' placeholder='Enter first name...' name='first_name' value={employee.first_name}></input>
                         <FormFieldError messages={errors?.firstName} />
                     </div>
-                    <div className={styles.inputArea}>
+                    <div className='input-area'>
                         <label>Last Name:</label>
-                        <input onChange={handleTextChange} className={styles.text} type='text' placeholder='Enter last name...' name='last_name' value={employee.last_name}></input>
+                        <input onChange={handleTextChange} className='text' type='text' placeholder='Enter last name...' name='last_name' value={employee.last_name}></input>
                         <FormFieldError messages={errors?.lastName} />
                     </div>
-                    <div className={styles.inputArea}>
+                    <div className='input-area'>
                         <label>Email:</label>
-                        <input onChange={handleTextChange} className={styles.text} type='text' placeholder='Enter email...' name='email' value={employee.email}></input>
+                        <input onChange={handleTextChange} className='text' type='text' placeholder='Enter email...' name='email' value={employee.email}></input>
                         <FormFieldError messages={errors?.email} />
                     </div>
                     <button type='button' onClick={() => handleClick()}>Save</button>

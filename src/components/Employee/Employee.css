@@ -14,7 +14,7 @@
     width: 25%;
 }
 
-.employeeCard {
+.employee-card {
     padding: 30px 50px;
     min-width: 300px;
     width: 25%;
@@ -29,12 +29,12 @@ form {
     flex-direction: column;
 }
 
-.inputArea {
+.input-area {
     display: flex;
     flex-direction: column;
 }
 
-.inputArea > label {
+.input-area > label {
     padding: 15px 5px;
     font-size: 18px;
     font-weight: bold;
@@ -42,7 +42,7 @@ form {
     text-decoration: underline;
 }
 
-.inputArea > input[type='text'] {
+.input-area > input[type='text'] {
     font-size: 18px;
     height: 24px;
     padding: 10px;

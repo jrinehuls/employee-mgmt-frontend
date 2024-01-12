@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-import styles from './Employees.module.css';
+import './Employees.css';
 import { getEmployees } from "../../services/employeeService";
 
 
@@ -24,12 +23,12 @@ function Employees() {
     }
 
     return (
-        <div className={styles.tableContainer}>
-            <div className={styles.buttonContainer}>
+        <div className='table-container'>
+            <div className='button-container'>
                 <h1>Employees:</h1>
-                <button className={styles.addEmpBtn} onClick={addEmployee}>Add Employee</button>
+                <button className='add-emp-btn' onClick={addEmployee}>Add Employee</button>
             </div>
-            <table className={styles.employeeTable}>
+            <table className='employee-table'>
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -42,7 +41,7 @@ function Employees() {
                 {employees.map(e => {
                     numRows++;
                     return (
-                        <tr key={e.id} className={numRows % 2 === 0 ? styles.even : styles.odd}>
+                        <tr key={e.id} className={numRows % 2 === 0 ? 'even' : 'odd'}>
                             <td>{e.id}</td>
                             <td>{e.first_name}</td>
                             <td>{e.last_name}</td>

@@ -1,4 +1,4 @@
-import styles from './FormFieldError.module.css'
+import './FormFieldError.css'
 
 function FormFieldError({messages}) {
 
