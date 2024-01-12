@@ -69,8 +69,10 @@ function Employees() {
                             <td>{e.last_name}</td>
                             <td>{e.email}</td>
                             <td>
-                                <button className='update-button' onClick={() => onGetEmployee(e.id)}>Update</button>
-                                <button className='delete-button' onClick={() => onDeleteEmployee(e.id)}>Delete</button>
+                                <div className='action-button'>
+                                    <button className='update-button' onClick={() => onGetEmployee(e.id)}>Update</button>
+                                    <button className='delete-button' onClick={() => onDeleteEmployee(e.id)}>Delete</button>
+                                </div>
                             </td>
                         </tr>
                     );
